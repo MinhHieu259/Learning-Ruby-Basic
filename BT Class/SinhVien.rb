@@ -1,13 +1,16 @@
 class SinhVien
     attr_accessor :diemToan, :diemLy, :diemHoa
    
-        def initialize(diemToan, diemLy, diemHoa)
-            @diemToan = diemToan
-            @diemLy = diemLy
-            @diemHoa = diemHoa
+        def NhapTTSV
+            print "Nhập điểm toán: "
+            @diemToan = gets.to_f
+            print "Nhập điểm lý: "
+            @diemLy = gets.to_f
+            print "Nhập điểm hóa: "
+            @diemHoa = gets.to_f
         end
 
-        def thongTinSV
+        def XuatThongTinSV
             puts("Điểm Toán = #{@diemToan}")
             puts("Điểm Lý = #{@diemLy}")
             puts("Điểm Hóa = #{@diemHoa}")
@@ -18,14 +21,9 @@ class SinhVien
         end
 end
 
-print "Nhập điểm toán: "
-toan = gets.to_f
-print "Nhập điểm lý: "
-ly = gets.to_f
-print "Nhập điểm hóa: "
-hoa = gets.to_f
 
-sinhvien = SinhVien.new(toan, ly, hoa)
-sinhvien.thongTinSV
+sinhvien = SinhVien.new
+sinhvien.NhapTTSV
+sinhvien.XuatThongTinSV
 puts("Điểm trung bình = #{sinhvien.everaged}")
 
