@@ -41,11 +41,13 @@ student1 = Student.new('Nguyen Minh Hieu', 'Ngan', 70, 170, 21, '0774452227', 'm
 student2 = Student.new('Ngo Van Thuan', 'Ngan', 70, 170, 21, '0329568259', 'mhieutt7252@gmail.com', 'VietNam', 5, 8, 7)
 student3 = Student.new('Nguyen Thi Loan', 'Dai', 70, 170, 21, '0123456789', 'mhieu7y252@gmail.com', 'VietNam', 9, 8, 7)
 student4 = Student.new('Nguyen Van Anh', 'Ngan', 70, 170, 21, '0123456789', 'mhieui7252@gmail.com', 'VietNam', 5, 6, 7)
+student5 = Student.new('Nguyen Thi Bich Nhung', 'Dai', 70, 170, 21, '0123456789', 'mhieui7252@gmail.com', 'VietNam', 5, 10, 7)
 
 studentArraysTotal << student1
 studentArraysTotal << student2
 studentArraysTotal << student3
 studentArraysTotal << student4
+studentArraysTotal << student5
 
 studentArrays << student1
 studentArrays << student2
