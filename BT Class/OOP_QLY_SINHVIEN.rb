@@ -35,30 +35,21 @@ def print_student(message, array_students)
 end
 
 studentArrays = []
-studentArraysTotal = []
+arrayBeforeSort = []
 
-student1 = Student.new('Nguyen Minh Hieu', 'Ngan', 70, 170, 21, '0774452227', 'mhieu7252@gmail.com', 'VietNam', 9, 8, 9)
-student2 = Student.new('Ngo Van Thuan', 'Ngan', 70, 170, 21, '0329568259', 'mhieutt7252@gmail.com', 'VietNam', 5, 8, 7)
-student3 = Student.new('Nguyen Thi Loan', 'Dai', 70, 170, 21, '0123456789', 'mhieu7y252@gmail.com', 'VietNam', 9, 8, 7)
+student1 = Student.new('Nguyen Minh Hieu', 'Ngan', 70, 170, 21, '0774452227', 'mhieu7252@gmail.com', 'VietNam', 3.5, 8, 9)
+student2 = Student.new('Ngo Van Thuan', 'Ngan', 70, 170, 21, '0329568259', 'mhieutt7252@gmail.com', 'VietNam', 5, 5.4, 7)
+student3 = Student.new('Nguyen Thi Loan', 'Dai', 70, 170, 21, '0123456789', 'mhieu7y252@gmail.com', 'VietNam', 4.4, 8, 7)
 student4 = Student.new('Nguyen Van Anh', 'Ngan', 70, 170, 21, '0123456789', 'mhieui7252@gmail.com', 'VietNam', 5, 6, 7)
 student5 = Student.new('Nguyen Thi Bich Nhung', 'Dai', 70, 170, 21, '0123456789', 'mhieui7252@gmail.com', 'VietNam', 5, 10, 7)
-
-studentArraysTotal << student1
-studentArraysTotal << student2
-studentArraysTotal << student3
-studentArraysTotal << student4
-studentArraysTotal << student5
 
 studentArrays << student1
 studentArrays << student2
 studentArrays << student3
+studentArrays << student4
+studentArrays << student5
+arrayBeforeSort = studentArrays
 
+print_student("Danh sach sinh vien khi chua sap xep: ", arrayBeforeSort)
 studentArrays.sort! { |a, b| b.everage <=> a.everage }
-
 print_student("Danh sach sinh vien giam dan theo diem trung binh: ", studentArrays)
-for itemDelete in studentArrays do
-    studentArraysTotal.delete(itemDelete)
-end
-
-print_student("Danh sach sinh vien chua sap xep: ", studentArraysTotal)
-
