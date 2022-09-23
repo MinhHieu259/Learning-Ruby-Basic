@@ -54,9 +54,11 @@ studentArrays << student2
 studentArrays << student3
 
 studentArrays.sort! { |a, b| b.everage <=> a.everage }
+
 print_student("Danh sach sinh vien giam dan theo diem trung binh: ", studentArrays)
 for itemDelete in studentArrays do
     studentArraysTotal.delete(itemDelete)
 end
+
 print_student("Danh sach sinh vien chua sap xep: ", studentArraysTotal)
 
