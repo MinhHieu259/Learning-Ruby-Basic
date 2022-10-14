@@ -56,7 +56,7 @@ class PhanSo
     end
 end 
 
-class PhanSo2 < PhanSo
+class PhanSoOverride < PhanSo
     def congPhanSo(ps)
         result = super
         puts "Tong Hai phan so : #{result.tu_120} / #{result.mau_120}"
@@ -78,8 +78,8 @@ class PhanSo2 < PhanSo
     end
 end
 
-phanSo1 = PhanSo2.new(16, 3)
-phanSo2 = PhanSo2.new(4, 8)
+phanSo1 = PhanSoOverride.new(16, 3)
+phanSo2 = PhanSoOverride.new(4, 8)
 phanSo1.congPhanSo(phanSo2)
 phanSo1.truPhanSo(phanSo2)
 phanSo1.nhanPhanSo(phanSo2)
