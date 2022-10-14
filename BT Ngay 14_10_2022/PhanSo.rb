@@ -28,7 +28,7 @@ class PhanSo
         ms = @mau_120 * ps.mau_120
         phanSoTong = PhanSo.new(ts, ms)
         phanSoTong.toiGianPhanSo()
-        puts "Tong hai phan so: #{phanSoTong.tu_120} / #{phanSoTong.mau_120}"
+        return phanSoTong
     end
 
     def truPhanSo(ps)
@@ -36,7 +36,7 @@ class PhanSo
         ms = @mau_120 * ps.mau_120
         phanSoHieu = PhanSo.new(ts, ms)
         phanSoHieu.toiGianPhanSo()
-        puts "Hieu hai phan so: #{phanSoHieu.tu_120} / #{phanSoHieu.mau_120}"
+        return phanSoHieu
     end
 
     def nhanPhanSo(ps)
@@ -44,7 +44,7 @@ class PhanSo
         ms = @mau_120 * ps.tu_120
         phanSoTich = PhanSo.new(ts, ms)
         phanSoTich.toiGianPhanSo()
-        puts "Tich hai phan so: #{phanSoTich.tu_120} / #{phanSoTich.mau_120}"
+        return phanSoTich
     end
 
     def chiaPhanSo(ps)
@@ -52,25 +52,29 @@ class PhanSo
         ms = @mau_120 * ps.tu_120
         phanSoThuong = PhanSo.new(ts, ms)
         phanSoThuong.toiGianPhanSo()
-        puts "Thuong hai phan so: #{phanSoThuong.tu_120} / #{phanSoThuong.mau_120}"
+        return phanSoThuong
     end
 end 
 
 class PhanSo2 < PhanSo
     def congPhanSo(ps)
-        super
+        result = super
+        puts "Tong Hai phan so : #{result.tu_120} / #{result.mau_120}"
     end
 
     def truPhanSo(ps)
-        super
+        result = super
+        puts "Hieu Hai phan so : #{result.tu_120} / #{result.mau_120}"
     end
 
     def nhanPhanSo(ps)
-        super
+        result = super
+        puts "Tich Hai phan so : #{result.tu_120} / #{result.mau_120}"
     end
 
     def chiaPhanSo(ps)
-        super
+        result = super
+        puts "Thuong Hai phan so : #{result.tu_120} / #{result.mau_120}"
     end
 end
 
